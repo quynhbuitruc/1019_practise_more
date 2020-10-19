@@ -19,20 +19,20 @@ function moveLeft() {
 }
 
 function moveDown() {
-    let y = parseInt(document.getElementById("tank").style.top)
+    let x = parseInt(document.getElementById("tank").style.top)
     console.log(x)
-    if (y < 171) {
-        document.getElementById("tank").style.top = y + 19 + "px"
+    if (x < 171) {
+        document.getElementById("tank").style.top = x + 19 + "px"
     } else {
         document.getElementById("tank").style.top = "0px"
     }
 }
 
 function moveUp() {
-    let y = parseInt(document.getElementById("tank").style.top)
+    let x = parseInt(document.getElementById("tank").style.top)
     console.log(x)
-    if (y > 0) {
-        document.getElementById("tank").style.top = y - 19 + "px"
+    if (x > 0) {
+        document.getElementById("tank").style.top = x - 19 + "px"
     } else {
         document.getElementById("tank").style.top = "171px"
     }
