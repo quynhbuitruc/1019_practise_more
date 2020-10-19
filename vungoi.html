@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vừng ơi mở ra</title>
+</head>
+<body>
+    <p id="display"></p>
+    <script>
+        let passUser = prompt("Người ơi nhập 4 số mã vừng:")
+        if (passUser == 2934) {
+            document.getElementById("display").innerText = "Chúc mừng bạn!"
+        } else {
+            window.stop()
+        }
+    </script>
+    <p>Bạn rất may mắn vì bạn đã chọn đúng mật mã trong tổng số 10,000 con số !</p>
+</body>
+</html>
