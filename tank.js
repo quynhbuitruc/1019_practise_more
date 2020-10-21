@@ -45,3 +45,19 @@ function moveUp() {
         document.getElementById("tank").style.top = "171px"
     }
 }
+
+function moveDown() {
+    let y = parseInt(document.getElementById("tank").style.top)
+    console.log(y)
+    if (y == 95) {
+        document.getElementById("tank").style.visibility = "hidden" 
+        document.getElementById("rainBow").style.visibility = "visible"
+        document.getElementById("tank").style.top = y + 19 + "px"
+    } else if (y < 171) {
+        document.getElementById("rainBow").style.visibility = "hidden"
+        document.getElementById("tank").style.visibility = "visible"
+        document.getElementById("tank").style.top = y + 19 + "px"
+    } else {
+        document.getElementById("tank").style.top = "0px"
+    }
+}
