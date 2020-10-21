@@ -55,3 +55,32 @@ function moveLeft() {
         document.getElementById("tank").style.left = "171px"
     }
 }
+
+function moveUp() {
+    let x = parseInt(document.getElementById("tank").style.left)
+    let y = parseInt(document.getElementById("tank").style.top)
+    let Xtreasure = parseInt(document.getElementById("treasure").style.left)
+    let Ytreasure = parseInt(document.getElementById("treasure").style.top)
+    if (y > 0) {
+        if (y == Ytreasure + 19) {
+            if (x == Xtreasure) {
+                document.getElementById("tank").style.visibility = "hidden"
+                document.getElementById("treasure").style.visibility = "hidden"
+                document.getElementById("rainBow").style.visibility = "visible"
+                document.getElementById("tank").style.top = y - 19 + "px"
+            } else {
+                document.getElementById("treasure").style.visibility = "visible"
+                document.getElementById("tank").style.visibility = "visible"
+                document.getElementById("rainBow").style.visibility = "hidden"
+                document.getElementById("tank").style.top = y - 19 + "px"
+            }
+        } else {
+            document.getElementById("treasure").style.visibility = "visible"
+            document.getElementById("tank").style.visibility = "visible"
+            document.getElementById("rainBow").style.visibility = "hidden"
+            document.getElementById("tank").style.top = y - 19 + "px"
+        }
+    } else {
+        document.getElementById("tank").style.top = "171px"
+    }
+}
