@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fizz_Buzz</title>
 </head>
+
 <body>
     <script>
-        let InputNum = Number(prompt("Nhập số nguyên bất kỳ trong khoảng từ 1 tới 100"), "")
-        if InputNum
+        let InputNum = Number(prompt("Nhập số nguyên bất kỳ trong khoảng từ 01 tới 99", ""))
+        if (InputNum % 3 == 0) {
+            if (InputNum % 5 == 0) {
+                alert("FIZZ!!! BUZZ!!!")
+            } else {
+                alert("Fizzzzzzzzzzzzzzzzzzz!")
+            }
+        } else if (InputNum % 5 == 0) {
+            alert("Buzzzzzzzzzzzzzzzzzzz!")
+        } else {
+            alert(InputNum)
+        }
     </script>
 </body>
+
 </html>
