@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bóng đèn</title>
+</head>
+
+<body>
+    <div style="width: 300px; background-color: black; height: 300px;">
+        <img src="lightON.jpg" alt="Light bulb" id="Light" style="width: 300px; height: 300px; visibility:hidden;">
+    </div>
+    <p><button id="Congtac">Switch</button></p>
+    <script>
+        document.getElementById("Congtac").addEventListener('click', function () {
+            let bulb = document.getElementById("Light")
+            if (bulb.style.visibility == "hidden") {
+                document.getElementById("Light").style.visibility = "visible"
+            } else {
+                document.getElementById("Light").style.visibility = "hidden"
+            }
+        })
+    </script>
+</body>
+
+</html>
