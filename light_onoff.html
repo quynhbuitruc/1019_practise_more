@@ -5,16 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bóng đèn</title>
+    <style>
+        button {
+            height: 50px; width: 150px;
+        }
+    </style>
 </head>
 
 <body>
     <div style="width: 300px; background-color: black; height: 300px;">
         <img src="lightON.jpg" alt="Light bulb" id="Light" style="width: 300px; height: 300px; visibility:hidden;">
     </div>
-    <p><button id="Congtac">Switch 1</button></p>
-    <p><button id="Congtac">Switch 2</button></p>
+    <p><button id="Congtac1">Switch 1</button> <button id="Congtac2">Switch 2</button></p>
+    
     <script>
-        document.getElementById("Congtac").addEventListener('click', function () {
+        document.getElementById("Congtac1").addEventListener('click', function () {
+            let bulb = document.getElementById("Light")
+            if (bulb.style.visibility == "hidden") {
+                document.getElementById("Light").style.visibility = "visible"
+            } else {
+                document.getElementById("Light").style.visibility = "hidden"
+            }
+        })
+        document.getElementById("Congtac2").addEventListener("click", function () {
             let bulb = document.getElementById("Light")
             if (bulb.style.visibility == "hidden") {
                 document.getElementById("Light").style.visibility = "visible"
